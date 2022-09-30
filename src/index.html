@@ -7,7 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
+<body  onload="disconnect()">
+  <div>
+    <br />
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">
+            Disconnect
+        </button>
+    </div>
+    <br />
+    <div id="nameInputDiv">
+        <input type="string" id="name" placeholder="Name"/>
+        <button id="sendName" onclick="sendName();">Send</button>
+        <!-- <p id="response"></p> -->
+    </div>
+</div>
+  <canvas  class="game"></canvas>
   <app-root></app-root>
 </body>
 </html>
